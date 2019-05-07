@@ -1,6 +1,6 @@
 # Get-DelegatesAndForwardingRules.ps1
 
-This scripts gathers delegate and SMTP forwarding information for all Exchange user mailboxes.
+This script gathers delegate and SMTP forwarding information for all Exchange user mailboxes.
 
 ## Description
 

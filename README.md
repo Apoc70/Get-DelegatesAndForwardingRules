@@ -1,45 +1,69 @@
 # Get-DelegatesAndForwardingRules.ps1
 
-Generate an email report of Exchange database backup times
+This scripts gathers delegate and SMTP forwarding information for all Exchange user mailboxes.
 
 ## Description
 
-Some description
+This script connects either to Exchange Online or to a dedicated on-premises Exchange Server to export configures mailbox delegates and SMTP forwarding configurations. The SMTP forwarding configurations are gathered from inbox rules and from mailbox forwarding settings.
+
+The gathered information is exported into three different CSV files for further analysis.
 
 ## Requirements
 
-- Req 1
+- Exchange Server 2016 or newer
+- Crednetials to logon to Exchange Online and Office 365 when querying EXO mailboxes
+- Utilizes GlobalFunctions PowerShell Module --> [http://bit.ly/GlobalFunctions](http://bit.ly/GlobalFunctions)
 
 ## Parameters
 
-### Parameter
+### ExchangeOnline
+
+Connect to Exchange Online instead of an on-premises Exchange organization
+
+### UseStoredCredentials
+
+Use encrypted credentials stored in a file. (Not implemented yet)
+
+### ExchangeHost
+
+Host name of the on-premises Exchange Server to connect to
+
+### CsvDelimiter
+
+Preferred delimiter character for the exported CSV file
 
 ## Examples
 
 ``` PowerShell
-.\Get-DailyBackupAlerts.ps1
+.\Get-DelegatesAndForwardingRules.ps1 -ExchangeHost mx01.varunagroup.de
 ```
 
-Tip: Run as a scheduled task to generate the alerts automatically
+Connect to the on-premises Exchange Server mx01.varunagroup.de and export delegation and SMTP forwarding information
 
 ``` PowerShell 
-.\Get-DailyBackupAlerts.ps1 -AlwaysSend -Log
+.\Get-DelegatesAndForwardingRules.ps1 -ExchangeHost mx01.varunagroup.de -Verbose
 ```
 
-Sends the report even if no alerts are found, and writes a log file... 
+Connect to the on-premises Exchange Server mx01.varunagroup.de, export delegation and SMTP forwarding information and get verbose information on the objects worked on
+
+``` PowerShell 
+.\Get-DelegatesAndForwardingRules.ps1 -ExchangeOnline
+```
+
+Connect to Exchange Online and export delegation and SMTP forwarding information
 
 ## Note
 
 THIS CODE IS MADE AVAILABLE AS IS, WITHOUT WARRANTY OF ANY KIND. THE ENTIRE
 RISK OF THE USE OR THE RESULTS FROM THE USE OF THIS CODE REMAINS WITH THE USER.
 
-The script is based on the original PowerShell script which is available here [https://github.com/OfficeDev/O365-InvestigationTooling/blob/master/DumpDelegatesandForwardingRules.ps1](https://github.com/OfficeDev/O365-InvestigationTooling/blob/master/DumpDelegatesandForwardingRules.ps1)
+The script is based on the original PowerShell script by by Brandon Koeller which is available here [https://github.com/OfficeDev/O365-InvestigationTooling/blob/master/DumpDelegatesandForwardingRules.ps1](https://github.com/OfficeDev/O365-InvestigationTooling/blob/master/DumpDelegatesandForwardingRules.ps1)
 
 ## TechNet Gallery
 
 Download and vote at TechNet Gallery
 
-- [TechNet Link] (https://gallery.technet.microsoft.com/Script-to-remove-unwanted-9d119c6b)
+- [TechNet Link] (https://gallery.technet.microsoft.com/Get-delegates-and-SMTP-9c42a270)
 
 ## Credits
 
@@ -57,7 +81,3 @@ For more Office 365, Cloud Security, and Exchange Server stuff checkout services
 - Blog: [http://blog.granikos.eu](http://blog.granikos.eu)
 - Website: [https://www.granikos.eu/en/](https://www.granikos.eu/en/)
 - Twitter: [https://twitter.com/granikos_de](https://twitter.com/granikos_de)
-
-Additional Credits:
-
-- Some credits

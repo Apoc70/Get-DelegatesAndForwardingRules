@@ -1,7 +1,7 @@
 <# 
 .SYNOPSIS 
 
-    This scripts gatehr the delegates and forwarding rules for all Exchange user mailboxes.
+    This scripts gathers delegate and SMTP forwarding information for all Exchange user mailboxes.
 
     Version 1.0, 20182019-04-26
 

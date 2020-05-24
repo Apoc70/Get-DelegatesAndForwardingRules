@@ -59,22 +59,18 @@ RISK OF THE USE OR THE RESULTS FROM THE USE OF THIS CODE REMAINS WITH THE USER.
 
 The script is based on the original PowerShell script by by Brandon Koeller which is available here [https://github.com/OfficeDev/O365-InvestigationTooling/blob/master/DumpDelegatesandForwardingRules.ps1](https://github.com/OfficeDev/O365-InvestigationTooling/blob/master/DumpDelegatesandForwardingRules.ps1)
 
-## TechNet Gallery
-
-Download and vote at TechNet Gallery
-
-- [TechNet Link] (https://gallery.technet.microsoft.com/Get-delegates-and-SMTP-9c42a270)
-
 ## Credits
 
 Written by: Thomas Stensitzki
 
-Stay connected:
+## Stay connected
 
 - My Blog: [http://justcantgetenough.granikos.eu](http://justcantgetenough.granikos.eu)
 - Twitter: [https://twitter.com/stensitzki](https://twitter.com/stensitzki)
 - LinkedIn: [http://de.linkedin.com/in/thomasstensitzki](http://de.linkedin.com/in/thomasstensitzki)
 - Github: [https://github.com/Apoc70](https://github.com/Apoc70)
+- MVP Blog: [https://blogs.msmvps.com/thomastechtalk/](https://blogs.msmvps.com/thomastechtalk/)
+- Tech Talk YouTube Channel (DE): [http://techtalk.granikos.eu](http://techtalk.granikos.eu)
 
 For more Office 365, Cloud Security, and Exchange Server stuff checkout services provided by Granikos
 

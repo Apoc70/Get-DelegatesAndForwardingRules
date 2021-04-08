@@ -82,15 +82,16 @@ $SmtpForwardingFileName = "MailboxSmtpforwarding-$(Get-Date -UFormat %Y-%m-%d).c
 
 function Import-RequiredModules {
 
-  # Import central logging functions 
-  if($null -ne (Get-Module -Name GlobalFunctions -ListAvailable).Version) {
-    Import-Module -Name GlobalFunctions
-  }
-  else {
-    Write-Warning -Message 'Unable to load GlobalFunctions PowerShell module.'
-    Write-Warning -Message 'Please check http://bit.ly/GlobalFunctions for further instructions'
-    exit
-  }
+# Import GlobalFunctions
+if($null -ne (Get-Module -Name GlobalFunctions -ListAvailable).Version) {
+  Import-Module -Name GlobalFunctions
+}
+else {
+  Write-Warning -Message 'Unable to load GlobalFunctions PowerShell module.'
+  Write-Warning -Message 'Open an administrative PowerShell session and run Import-Module GlobalFunctions'
+  Write-Warning -Message 'Please check http://bit.ly/GlobalFunctions for further instructions'
+  exit
+}
 
   if($ExchangeOnline) {
   # Import required PowerShell modules for Office 365
